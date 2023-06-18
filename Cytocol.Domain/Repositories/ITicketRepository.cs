@@ -1,0 +1,15 @@
+﻿using Cytocol.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cytocol.Domain.Repositories
+{
+    public interface ITicketRepository : IBaseRepository<Ticket>
+    {
+        Task<List<Ticket>> GetTicketsByUserId(int userId);
+        Task<List<Ticket>> GetTicketsByLawyerId(int lawyerId);
+    }
+}
